@@ -2,12 +2,14 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import XrHitCubeContainer from "./components/xr-hit-cube/XrHitCubeContainer";
 import Test from './components/Text';
+import XRGallery from './components/xr-gallery/XrGalleryContainer';
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<XrHitCubeContainer />} />
       <Route path="/test" element={<Test />} />
+      <Route path='/gallery' element={<XRGallery />} />
     </Routes>
   )
 }

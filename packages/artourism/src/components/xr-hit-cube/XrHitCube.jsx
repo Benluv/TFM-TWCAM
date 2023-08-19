@@ -35,7 +35,7 @@ const XrHitCube = () => {
   return (
     <>
       <OrbitControls />
-      <ambientLight />
+      <ambientLight intensity={1.8}/>
       {isPresenting &&
         cubes.map(({ position, id }) => {
           return <Cube key={id} position={position} />;
@@ -43,7 +43,7 @@ const XrHitCube = () => {
       {isPresenting && (
         <Interactive onSelect={placeCube}>
           <mesh ref={reticleRef} rotation-x={-Math.PI / 2}>
-            <ringGeometry args={[0.1, 0.25, 32]} />
+            <ringGeometry args={[0.08, 0.16, 32,,,5.25]} />
             <meshStandardMaterial color={"white"} />
           </mesh>
         </Interactive>

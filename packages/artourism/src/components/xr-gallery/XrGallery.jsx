@@ -39,7 +39,7 @@ const XrOverlay = () => {
   return (
     <>
       <OrbitControls />
-      <ambientLight intensity={1.5}/>
+      <ambientLight intensity={1.8}/>
       {isPresenting &&
         models.map(({ position, id }) => {
           return (
