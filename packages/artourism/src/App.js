@@ -3,6 +3,7 @@ import './App.css';
 import XrHitCubeContainer from "./components/xr-hit-cube/XrHitCubeContainer";
 import Test from './components/Text';
 import XRGallery from './components/xr-gallery/XrGalleryContainer';
+import Model from './components/xr-hit-model/ModelContainer'
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <Route path="/" element={<XrHitCubeContainer />} />
       <Route path="/test" element={<Test />} />
       <Route path='/gallery' element={<XRGallery />} />
+      <Route path='/model' element={<Model />} />
     </Routes>
   )
 }

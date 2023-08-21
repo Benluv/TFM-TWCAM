@@ -1,11 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useCharacterAnimations } from "../../contexts/CharacterAnimations";
+import { Mestalla } from "../xr-hit-model/Mestalla-solo";
+import { MestallaFinal } from "../xr-hit-model/Mestalla-solo-final";
 
 export default function Druid(props) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/models/druid.gltf");
-  const { actions, names } = useAnimations(animations, group);
+  // const { nodes, materials, animations } = useGLTF("/models/druid.gltf");
+  const { nodes, materials, animations } = useGLTF("/models/mestalla-solo.glb");
+  // const { actions, names } = useAnimations(animations, group);
 
   // const { setAnimations, animationIndex, Color } = useCharacterAnimations();
 
@@ -23,7 +26,8 @@ export default function Druid(props) {
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <group scale={1.91}>
+      <MestallaFinal />
+      {/* <group scale={1.91}>
         <primitive object={nodes.root} />
         <skinnedMesh
           geometry={nodes.druid.geometry}
@@ -31,12 +35,12 @@ export default function Druid(props) {
           skeleton={nodes.druid.skeleton}
           // material-color={Color}
         />
-      </group>
+      </group> */}
     </group>
   );
 }
 
-useGLTF.preload("/models/druid.gltf");
+useGLTF.preload("/models/mestalla/mestalla-solo-1.gltf");
 
 // import { useLoader } from "@react-three/fiber";
 // import { Suspense } from "react";
