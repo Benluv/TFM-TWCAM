@@ -8,8 +8,10 @@ export const CharacterAnimationsProvider = (props) => {
     // Color: "#ffffff",
     Model: {
       options: {
-        Druid: "druid",
-        "Young Korrigan": "young-korrigan",
+        Mestalla: "mestalla",
+        ETSE: "etse",
+        "Parc Cientific": "parc-cientific",
+        Oceanografic: "oceanografic",
         "Korrigan Hat": "korrigan-hat",
       },
       onChange: (value) => {

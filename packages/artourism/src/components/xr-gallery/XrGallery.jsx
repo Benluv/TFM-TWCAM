@@ -3,9 +3,11 @@ import { useThree } from "@react-three/fiber";
 import { Interactive, useHitTest, useXR } from "@react-three/xr";
 import { Fragment, useRef, useState } from "react";
 import { useCharacterAnimations } from "../../contexts/CharacterAnimations";
-import Druid from "./Druid";
-import KorriganHat from "./KorriganHat";
-import YoungKorrigan from "./YoungKorrigan";
+import KorriganHat from "./models/KorriganHat";
+import Oceanografic from "./models/Oceanografic";
+import ParcCientific from "./models/ParcCientific";
+import Mestalla from "./models/Mestalla";
+import Etse from "./models/Etse";
 
 const XrOverlay = () => {
   const reticleRef = useRef();
@@ -44,9 +46,15 @@ const XrOverlay = () => {
         models.map(({ position, id }) => {
           return (
             <Fragment key={id}>
-              {currentModelName === "druid" && <Druid position={position} />}
-              {currentModelName === "young-korrigan" && (
-                <YoungKorrigan position={position} />
+              {currentModelName === "mestalla" && <Mestalla position={position} />}
+              {currentModelName === "etse" && (
+                <Etse position={position} />
+              )}
+              {currentModelName === "parc-cientific" && (
+                <ParcCientific position={position} />
+              )}
+              {currentModelName === "oceanografic" && (
+                <Oceanografic position={position} />
               )}
               {currentModelName === "korrigan-hat" && (
                 <KorriganHat position={position} />
@@ -63,10 +71,10 @@ const XrOverlay = () => {
         </Interactive>
       )}
 
-      {!isPresenting && currentModelName === "druid" && <Druid />}
-      {!isPresenting && currentModelName === "young-korrigan" && (
-        <YoungKorrigan />
-      )}
+      {!isPresenting && currentModelName === "mestalla" && <Mestalla />}
+      {!isPresenting && currentModelName === "etse" && <Etse /> }
+      {!isPresenting && currentModelName === "parc-cientific" && <ParcCientific /> }
+      {!isPresenting && currentModelName === "oceanografic" && <Oceanografic /> }
       {!isPresenting && currentModelName === "korrigan-hat" && <KorriganHat />}
     </>
   );
