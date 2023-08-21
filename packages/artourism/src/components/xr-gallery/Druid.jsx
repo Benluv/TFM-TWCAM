@@ -26,7 +26,7 @@ export default function Druid(props) {
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <MestallaFinal scale={0.45} />
+      <MestallaFinal scale={0.35} />
       {/* <group scale={1.91}>
         <primitive object={nodes.root} />
         <skinnedMesh
