@@ -3,12 +3,11 @@ import { useThree} from "@react-three/fiber";
 import { Interactive, useHitTest, useXR } from "@react-three/xr";
 import { Fragment, useRef, useState } from "react";
 import { useCharacterAnimations } from "../../contexts/CharacterAnimations";
-import KorriganHat from "./models/KorriganHat";
-import Oceanografic from "./models/Oceanografic";
-import ParcCientific from "./models/ParcCientific";
-import Mestalla from "./models/Mestalla";
-import Etse from "./models/Etse";
-import Arts from "./models/Arts";
+import Oceanografic from "./modelsImpl/Oceanografic";
+import ParcCientific from "./modelsImpl/ParcCientific";
+import Mestalla from "./modelsImpl/Mestalla";
+import Etse from "./modelsImpl/Etse";
+import Arts from "./modelsImpl/Arts";
 
 const XrOverlay = () => {
   const reticleRef = useRef();
@@ -47,19 +46,20 @@ const XrOverlay = () => {
         models.map(({ position, id }) => {
           return (
             <Fragment key={id}>
-              {currentModelName === "ciudad-de-artes" && <Arts position={position} /> }
-              {currentModelName === "mestalla" && <Mestalla position={position} />}
-              {currentModelName === "etse" && (
-                <Etse position={position} />
+              {currentModelName === "ciudad-de-artes" && (
+                <Arts position={position} />
               )}
+              {currentModelName === "mestalla" && (
+                <Mestalla position={position} />
+              )}
+              {currentModelName === "etse" && (
+                <Etse position={position} />)
+              }
               {currentModelName === "parc-cientific" && (
                 <ParcCientific position={position} />
               )}
               {currentModelName === "oceanografic" && (
                 <Oceanografic position={position} />
-              )}
-              {currentModelName === "korrigan-hat" && (
-                <KorriganHat position={position} />
               )}
             </Fragment>
           );
@@ -78,7 +78,6 @@ const XrOverlay = () => {
       {!isPresenting && currentModelName === "etse" && <Etse /> }
       {!isPresenting && currentModelName === "parc-cientific" && <ParcCientific /> }
       {!isPresenting && currentModelName === "oceanografic" && <Oceanografic /> }
-      {!isPresenting && currentModelName === "korrigan-hat" && <KorriganHat />}
     </>
   );
 };

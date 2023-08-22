@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { ArtsModel } from "../../xr-hit-model/ArtsModel";
+import { ArtsModel } from "../models/ArtsModel";
 import ModelMotion from "../helpers/ModelMotion";
 
 export default function Arts(props) {
@@ -14,7 +14,7 @@ export default function Arts(props) {
           console.log(e)
         }}
     >
-    <ModelMotion group={group} rotFactor={4}/>
+    <ModelMotion group={group} />
     <ArtsModel scale={0.07} />
     </group>
   );

@@ -5,7 +5,7 @@ import { useXR } from "@react-three/xr";
 export default function ModelMotion(props) {
     const { group, rotFactor } = props;
     const { isPresenting } = useXR();
-    const rot = rotFactor || 200;
+    const rot = rotFactor || 10;
 
     useFrame((state, delta) => {
     if(!isPresenting) {
