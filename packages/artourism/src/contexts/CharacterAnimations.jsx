@@ -8,6 +8,7 @@ export const CharacterAnimationsProvider = (props) => {
     // Color: "#ffffff",
     Model: {
       options: {
+        "Ciudad de las Artes y las Ciencias": "ciudad-de-artes",
         Mestalla: "mestalla",
         ETSE: "etse",
         "Parc Cientific": "parc-cientific",

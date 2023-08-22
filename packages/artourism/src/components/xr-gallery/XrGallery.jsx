@@ -1,5 +1,5 @@
 import { OrbitControls } from "@react-three/drei";
-import { useThree } from "@react-three/fiber";
+import { useThree} from "@react-three/fiber";
 import { Interactive, useHitTest, useXR } from "@react-three/xr";
 import { Fragment, useRef, useState } from "react";
 import { useCharacterAnimations } from "../../contexts/CharacterAnimations";
@@ -8,6 +8,7 @@ import Oceanografic from "./models/Oceanografic";
 import ParcCientific from "./models/ParcCientific";
 import Mestalla from "./models/Mestalla";
 import Etse from "./models/Etse";
+import Arts from "./models/Arts";
 
 const XrOverlay = () => {
   const reticleRef = useRef();
@@ -46,6 +47,7 @@ const XrOverlay = () => {
         models.map(({ position, id }) => {
           return (
             <Fragment key={id}>
+              {currentModelName === "ciudad-de-artes" && <Arts position={position} /> }
               {currentModelName === "mestalla" && <Mestalla position={position} />}
               {currentModelName === "etse" && (
                 <Etse position={position} />
@@ -71,6 +73,7 @@ const XrOverlay = () => {
         </Interactive>
       )}
 
+      {!isPresenting && currentModelName === "ciudad-de-artes" && <Arts /> }
       {!isPresenting && currentModelName === "mestalla" && <Mestalla />}
       {!isPresenting && currentModelName === "etse" && <Etse /> }
       {!isPresenting && currentModelName === "parc-cientific" && <ParcCientific /> }
