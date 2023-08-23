@@ -11,7 +11,7 @@ export default function ModelMotion(props) {
     if(!isPresenting) {
       group.current.rotation.y += delta/rot;
       group.current.rotation.x = 0.5;
-      group.current.scale.set(5, 5, 5)
+      group.current.scale.set(3.2, 3.2, 3.2)
     }
     });
 }

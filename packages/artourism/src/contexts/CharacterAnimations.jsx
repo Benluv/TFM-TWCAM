@@ -12,7 +12,6 @@ export const CharacterAnimationsProvider = (props) => {
         ETSE: "etse",
         "Parc Cientific": "parc-cientific",
         Oceanografic: "oceanografic",
-        "Korrigan Hat": "korrigan-hat",
       },
       onChange: (value) => {
         setCurrentModelName(value);
