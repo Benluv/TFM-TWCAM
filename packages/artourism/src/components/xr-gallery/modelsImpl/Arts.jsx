@@ -1,20 +1,19 @@
 import React, { useRef } from "react";
 import { ArtsModel } from "../models/ArtsModel";
 import ModelMotion from "../helpers/ModelMotion";
-import { Interactive, VRButton } from "@react-three/xr";
-import { LoadScript } from "@react-google-maps/api";
+import { Interactive } from "@react-three/xr";
 import ModelPosToPan from "../helpers/ModelPosToPan";
+import { useLoadScript } from "@react-google-maps/api";
 
 export default function Arts(props) {
   const group = useRef();
-  const lib = ["places"]
+
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: "AIzaSyD6Qp0RbqanA6iZqaPf7dzN4RqoG58iVLE",
+})
   
   const selectModel = (e) => {
-    // process.env.REACT_APP_GOOGLE_MAPS_API_KEY = AIzaSyD6Qp0RbqanA6iZqaPf7dzN4RqoG58iVLE
-    //set "REACT_APP_GOOGLE_MAPS_API_KEY=AIzaSyD6Qp0RbqanA6iZqaPf7dzN4RqoG58iVLE" && npm start
-    <LoadScript googleMapsApiKey={"AIzaSyD6Qp0RbqanA6iZqaPf7dzN4RqoG58iVLE"} libraries={lib}>
-      <ModelPosToPan />
-    </LoadScript>
+    <ModelPosToPan />
     console.log(e.intersection.object.position)
   }
 
@@ -22,9 +21,8 @@ export default function Arts(props) {
     <group ref={group} {...props} dispose={null} 
     onDoubleClick={
         (e) => {
-          <LoadScript googleMapsApiKey={"AIzaSyD6Qp0RbqanA6iZqaPf7dzN4RqoG58iVLE"} libraries={lib}>
-            <ModelPosToPan />
-          </LoadScript>
+          {isLoaded ? (<ModelPosToPan />) : console.log(loadError)}
+          {loadError ? console.log(loadError) : console.log("loaded")}
           e.stopPropagation();
           document.body.style.cursor = "pointer";
           const { x, y, z } = e.object.position
