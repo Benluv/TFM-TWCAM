@@ -24,8 +24,7 @@ export default function Arts(props) {
   }
 
   return (
-    <group ref={group} {...props} dispose={null} 
-    onDoubleClick={selectModel}>
+    <group ref={group} {...props} dispose={null}>
     <ModelMotion group={group} />
     <Interactive >{/*onSelect={selectModel}>*/}
       <ArtsModel scale={0.07} />
