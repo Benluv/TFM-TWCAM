@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { createContext, useRef, useState } from "react";
 import { ArtsModel } from "../models/ArtsModel";
 import ModelMotion from "../helpers/ModelMotion";
 import { Interactive } from "@react-three/xr";
@@ -15,9 +15,8 @@ export default function Arts(props) {
     googleMapsApiKey: GOOGLE_API_KEY,
     libraries,
 })
-  
-  const selectModel = (e) => {
 
+  const selectModel = (e) => {
     {isLoaded ? (navigate("/panorama")) : console.log(loadError)}
     {loadError ? console.log(loadError) : console.log("loaded")}
     const position = e.intersection.object.position

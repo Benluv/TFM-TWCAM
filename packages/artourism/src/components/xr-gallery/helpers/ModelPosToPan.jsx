@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { GoogleMap, StreetViewPanorama } from "@react-google-maps/api";
 
 function ModelPosToPan() {
@@ -14,12 +14,14 @@ function ModelPosToPan() {
     
     return (
         <>
+        <Suspense fallback={<div>Loading...</div>}>
         <GoogleMap mapContainerStyle={containerStyle} center={turia} zoom={10}>
             <StreetViewPanorama
             position={turia}
             visible={true}
             />
         </GoogleMap>
+        </Suspense>
         </>
     );
 }
