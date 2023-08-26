@@ -19,25 +19,15 @@ export default function Arts(props) {
   const selectModel = (e) => {
     {isLoaded ? (navigate("/panorama")) : console.log(loadError)}
     {loadError ? console.log(loadError) : console.log("loaded")}
-    e.stopPropagation()
     const { x, y, z } = e.object.position
     console.log(x, y, z)
   }
 
   return (
     <group ref={group} {...props} dispose={null} 
-    onDoubleClick={
-        (e) => {
-          {isLoaded ? (navigate("/panorama")) : console.log(loadError)}
-          {loadError ? console.log(loadError) : console.log("loaded")}
-          e.stopPropagation();
-          document.body.style.cursor = "pointer";
-          const { x, y, z } = e.object.position
-          console.log(x, y, z)
-        }}
-    >
+    onDoubleClick={selectModel}>
     <ModelMotion group={group} />
-    <Interactive onSelect={selectModel}>
+    <Interactive >{/*onSelect={selectModel}>*/}
       <ArtsModel scale={0.07} />
     </Interactive>
     </group>
