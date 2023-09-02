@@ -2,7 +2,7 @@ import { OrbitControls } from "@react-three/drei";
 import { useThree} from "@react-three/fiber";
 import { Interactive, useHitTest, useXR } from "@react-three/xr";
 import { Fragment, useRef, useState } from "react";
-import { useCharacterAnimations } from "../../contexts/CharacterAnimations";
+import { useListModels } from "../../contexts/ListModels";
 import Oceanografic from "./modelsImpl/Oceanografic";
 import ParcCientific from "./modelsImpl/ParcCientific";
 import Mestalla from "./modelsImpl/Mestalla";
@@ -12,7 +12,7 @@ import Arts from "./modelsImpl/Arts";
 const XrOverlay = () => {
   const reticleRef = useRef();
   const [models, setModels] = useState([]);
-  const { currentModelName } = useCharacterAnimations();
+  const { currentModelName } = useListModels();
 
   const { isPresenting } = useXR();
 
@@ -68,7 +68,7 @@ const XrOverlay = () => {
         <Interactive onSelect={placeModel}>
           <mesh ref={reticleRef} rotation-x={-Math.PI / 2}>
             <ringGeometry args={[0.08, 0.16, 32,,,5.25]} />
-            <meshStandardMaterial color={"white"} />
+            <meshStandardMaterial color={"lightBlue"} />
           </mesh>
         </Interactive>
       )}

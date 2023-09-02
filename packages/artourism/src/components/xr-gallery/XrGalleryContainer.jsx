@@ -1,13 +1,13 @@
 import { Canvas } from "@react-three/fiber";
 import { ARButton, XR } from "@react-three/xr";
-import { CharacterAnimationsProvider } from "../../contexts/CharacterAnimations";
+import { ListModelsProvider } from "../../contexts/ListModels";
 import XrGallery from "./XrGallery";
 
 const XrGalleryContainer = () => {
 
   return (
     <>
-      <CharacterAnimationsProvider>
+      <ListModelsProvider>
         <ARButton
           className="xr-button"
           sessionInit={{
@@ -19,7 +19,7 @@ const XrGalleryContainer = () => {
             <XrGallery />
           </XR>
         </Canvas>
-      </CharacterAnimationsProvider>
+      </ListModelsProvider>
     </>
   );
 };

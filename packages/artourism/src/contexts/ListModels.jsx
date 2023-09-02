@@ -1,9 +1,9 @@
 import { useControls } from "leva";
 import { createContext, useContext, useState } from "react";
 
-const CharacterAnimationsContext = createContext({});
+const listModelsContext = createContext({});
 
-export const CharacterAnimationsProvider = (props) => {
+export const ListModelsProvider = (props) => {
   const { Model } = useControls({
     Model: {
       options: {
@@ -22,18 +22,18 @@ export const CharacterAnimationsProvider = (props) => {
 
   return (
     <>
-      <CharacterAnimationsContext.Provider
+      <listModelsContext.Provider
         value={{
           currentModelName,
           setCurrentModelName,
         }}
       >
         {props.children}
-      </CharacterAnimationsContext.Provider>
+      </listModelsContext.Provider>
     </>
   );
 };
 
-export const useCharacterAnimations = () => {
-  return useContext(CharacterAnimationsContext);
+export const useListModels = () => {
+  return useContext(listModelsContext);
 };
