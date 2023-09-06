@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'server_tfm.wsgi.application'
 #     }
 # }
 
-DB_NAME = 'stored_somewhere_on_local_machine'
+DB_NAME = ''
 
 
 # Password validation
