@@ -7,10 +7,10 @@ export const ListModelsProvider = (props) => {
   const { Model } = useControls({
     Model: {
       options: {
-        "Ciudad de las Artes y las Ciencias": "ciudad-de-artes",
-        Mestalla: "mestalla",
         ETSE: "etse",
         "Parc Cientific": "parc-cientific",
+        Mestalla: "mestalla",
+        "Ciudad de las Artes y las Ciencias": "ciudad-de-artes",
         Oceanografic: "oceanografic",
       },
       onChange: (value) => {

@@ -46,17 +46,17 @@ const XrOverlay = () => {
         models.map(({ position, id }) => {
           return (
             <Fragment key={id}>
-              {currentModelName === "ciudad-de-artes" && (
-                <Arts position={position} />
-              )}
-              {currentModelName === "mestalla" && (
-                <Mestalla position={position} />
-              )}
               {currentModelName === "etse" && (
                 <Etse position={position} />)
               }
               {currentModelName === "parc-cientific" && (
                 <ParcCientific position={position} />
+              )}
+              {currentModelName === "mestalla" && (
+                <Mestalla position={position} />
+              )}
+              {currentModelName === "ciudad-de-artes" && (
+                <Arts position={position} />
               )}
               {currentModelName === "oceanografic" && (
                 <Oceanografic position={position} />
@@ -73,10 +73,10 @@ const XrOverlay = () => {
         </Interactive>
       )}
 
-      {!isPresenting && currentModelName === "ciudad-de-artes" && <Arts /> }
-      {!isPresenting && currentModelName === "mestalla" && <Mestalla />}
       {!isPresenting && currentModelName === "etse" && <Etse /> }
       {!isPresenting && currentModelName === "parc-cientific" && <ParcCientific /> }
+      {!isPresenting && currentModelName === "mestalla" && <Mestalla />}
+      {!isPresenting && currentModelName === "ciudad-de-artes" && <Arts /> }
       {!isPresenting && currentModelName === "oceanografic" && <Oceanografic /> }
     </>
   );
