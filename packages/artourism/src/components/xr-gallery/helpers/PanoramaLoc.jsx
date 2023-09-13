@@ -1,15 +1,18 @@
 import React, { Suspense } from "react";
 import { GoogleMap, StreetViewPanorama } from "@react-google-maps/api";
 
-function ModelPosToPan() {
+function ModelPosToPan({ lat, lng }) {
     const containerStyle = { width: "100vw", height: "100vh",};
-    const turia = {lat: 39.459485, lng: -0.356148, };
+    if(!lat || !lng) return (<>
+    </>)
+    const center = {lat: lat, lng: lng };
+    console.log ("lat", lat, "lng", lng)
     return (
         <>
         <Suspense fallback={<div>Loading...</div>}>
-        <GoogleMap mapContainerStyle={containerStyle} center={turia} zoom={10}>
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
             <StreetViewPanorama
-            position={turia}
+            position={center}
             visible={true}
             />
         </GoogleMap>
