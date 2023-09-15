@@ -6,7 +6,7 @@ import { useLoadScript } from "@react-google-maps/api";
 import { useNavigate } from "react-router-dom";
 
 export default function Arts(props) {
-  const GOOGLE_API_KEY = "AIzaSyAMxhZxsOG_lcvnfYVJrCUQDOCMrkK7q_E"
+  const GOOGLE_API_KEY = ""
   const group = useRef();
   const navigate = useNavigate();
   const [ libraries ] = useState(['places']);
