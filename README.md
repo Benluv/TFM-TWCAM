@@ -20,7 +20,12 @@ En el desarrollo de la presente investigación, se abordarán diversos aspectos 
 
 En conclusión, el presente trabajo tiene como objetivo principal explorar y aprovechar los avances en tecnologías XR para el desarrollo de una aplicación React que permita a los usuarios disfrutar de experiencias inmersivas en AR y VR. El estudio de las tecnologías implicadas y la configuración de la infraestructura necesaria para su correcto funcionamiento permitirán ofrecer una aplicación con alto valor potencial en distintos ámbitos de la vida cotidiana y profesional.
 
-[^1]: Referencia 1 - [XR:taxonomy](URL)
+**Imágenes**
+
+![Modelo 3D en AR / Modelo 3D en VR](https://gdurl.com/AIXe)
+Palau de Reina Sofía en la ciudad de Artes y Ciencias en Realidad Aumentada y Realidad Virtual
+
 [^2]: Referencia 2 - [VR:oculus](URL)
+[^1]: Referencia 1 - [XR:taxonomy](URL)
 [^3]: Referencia 3 - [AR:apple](URL)
 [^4]: Referencia 4 - [XR:three](URL)
