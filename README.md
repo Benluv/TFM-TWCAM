@@ -1,31 +1,31 @@
-# Adquirido de la memoria del TFM
+# Adquired from my Master's Thesis
 
-## Introducción
+## Introduction
 
-En la actual era digital, la tecnología ha experimentado avances significativos que han permeado en diversos ámbitos de nuestra cotidianidad, transformando la forma en que interactuamos con el entorno y accedemos a información. Uno de los campos que ha experimentado un desarrollo vertiginoso es el de la **Realidad Extendida (XR)**[^1], un término paraguas que engloba la **Realidad Virtual (VR)**[^2], la **Realidad Aumentada (AR)**[^3], y la **Realidad Mixta (MR)**[^1], complementando la capacidad de añadir información de manera virtual con el control y conocimiento de un entorno virtual[^1]. Estas tecnologías emergentes han abierto un amplio abanico de posibilidades en aplicaciones tanto lúdicas como prácticas, y han comenzado a ser utilizadas en diversos sectores, desde la industria y el entretenimiento hasta la educación y la medicina.
+In the current digital age, technology has undergone significant advances that have permeated various aspects of our daily lives, transforming the way we interact with the environment and access information. One of the fields that has experienced rapid development is that of Extended Reality (XR)[^1], an umbrella term that encompasses Virtual Reality (VR)[^2], Augmented Reality (AR)[^3], and Mixed Reality (MR)[^1], complementing the ability to add information virtually with the control and knowledge of a virtual environment[^1]. These emerging technologies have opened up a wide range of possibilities in both applications for practical and leisure use, as well as its usage in various sectors, from industry and entertainment to education and medicine.
 
-El presente **Trabajo Final de Máster (TFM)** se centra en el "Desarrollo de una aplicación React para visualizar mapas 3D con Realidad Aumentada (AR) y fotos 360º en Realidad Virtual (VR)". El objetivo de este proyecto es aprovechar los avances tecnológicos en el campo de XR para crear una aplicación interactiva que permita a los usuarios explorar y visualizar modelos 3D en AR, así como sumergirse en escenarios inmersivos de VR a través de fotografías 360º.
+This **Master's Final Project (TFM)** focuses on the "Development of a React application for visualizing 3D maps with Augmented Reality (AR) and 360º photos in Virtual Reality (VR)". The objective of this project is to take advantage of technological advances in the field of XR to create an interactive application that allows users to explore and visualize 3D models in AR, as well as immerse themselves in immersive VR scenarios through 360º photos.
 
-La combinación de AR y VR abre un nuevo panorama en cuanto a la experiencia de usuario, permitiendo una interacción más rica y realista con el contenido digital. La AR superpone elementos virtuales en el entorno físico del usuario, mientras que la VR sumerge al usuario en un mundo completamente digital y artificial. Ambas tecnologías, complementadas con la potencia de la plataforma React Expo y el motor gráfico Three.js, prometen una experiencia de usuario cautivadora y envolvente.
+The combination of AR and VR opens up a new horizon in terms of the user experience, allowing for a richer and more realistic interaction with digital content. AR overlays virtual elements on the user's physical environment, while VR immerses the user in a completely digital and artificial world. Both technologies, complemented by the power of the react-three-fiber and react-xr, having under the hood the graphics engine Three.js, promises a captivating and immersive user experience.
 
-En los últimos años, el desarrollo de tecnologías XR ha sido impulsado por importantes avances en hardware, como dispositivos de visualización más ligeros, potentes y accesibles, y la adopción masiva de smartphones de alto rendimiento con capacidades de AR y VR. Además, la creciente potencia de procesamiento y la mejora en algoritmos de seguimiento y reconocimiento han permitido un despliegue más efectivo de estas tecnologías en diversos dispositivos.
+In recent years, the development of XR technologies has been driven by major advances in hardware, such as lighter, more powerful, and more affordable display devices, and the widespread adoption of high-performance smartphones with AR and VR capabilities. In addition, the growing processing power and the improvement in tracking and recognition algorithms have made it possible to deploy these technologies more effectively on a variety of devices.
 
-En la actualidad, la XR ha encontrado aplicación en campos tan variados como la arquitectura, el diseño, la industria del entretenimiento, la medicina, la educación, el turismo y la publicidad, entre otros. Desde simulaciones de entrenamiento hasta la visualización de productos en 3D, estas tecnologías han revolucionado la manera en que percibimos y experimentamos la información.
+Currently, XR has found application in fields as diverse as architecture, design, the entertainment industry, medicine, education, tourism, advertising, smart cities, just to name a few. From training simulations to 3D product visualization, these technologies have revolutionized the way we perceive and experience information.
 
-Para llevar a cabo el desarrollo de la aplicación, se ha optado por emplear una arquitectura basada en un servidor de Django Rest API y una base de datos para almacenar los modelos 3D y las fotografías 360º. La elección de Django como framework de desarrollo backend se fundamenta en su robustez y capacidad para gestionar datos y peticiones de manera eficiente. Asimismo, la utilización de una base de datos permitirá un almacenamiento organizado y seguro de los recursos necesarios para la visualización en AR y VR.
+To carry out the development of the application, it has been chosen to use an architecture based on a Django Rest API server due to its easy implementation (ironically, the API Server is not yet implemented) and a mongodb database to store the 3D models and 360º photos. The choice of Django as a backend development framework is based on its robustness and ability to efficiently manage data and requests. Likewise, the use of a database will allow for an organized and secure storage of the resources needed for visualization in AR and VR.
 
-A través de la combinación de estas tecnologías, se busca facilitar la interacción del usuario con contenidos digitalmente generados y enriquecer su experiencia de usuario, proporcionando herramientas para la exploración y comprensión de entornos y objetos de manera innovadora y atractiva.
+Through the combination of these technologies, the goal is to facilitate user interaction with digitally generated content and enrich the user experience, providing tools for exploring and understanding environments and objects in an innovative and attractive way.
 
-En el desarrollo de la presente investigación, se abordarán diversos aspectos fundamentales para el logro de los objetivos planteados. Se llevará a cabo un análisis detallado de las tecnologías XR, su evolución a lo largo del tiempo y su impacto en la sociedad[^1]. Además, se describirá la arquitectura y el funcionamiento de la aplicación React Expo, destacando el papel clave que desempeña Three.js en la creación de experiencias 3D inmersivas[^4]. Asimismo, se profundizará en la configuración y despliegue del servidor Django Rest API y la base de datos para garantizar un óptimo funcionamiento de la aplicación en su conjunto.
+In the development of this research, various fundamental aspects will be addressed to achieve the objectives set out. A detailed analysis of XR technologies, their evolution over time, and their impact on society[^1] will be carried out. In addition, the architecture and operation of the React application will be described, highlighting the key role played by Three.js in the creation of immersive 3D experiences[^4].
 
-En conclusión, el presente trabajo tiene como objetivo principal explorar y aprovechar los avances en tecnologías XR para el desarrollo de una aplicación React que permita a los usuarios disfrutar de experiencias inmersivas en AR y VR. El estudio de las tecnologías implicadas y la configuración de la infraestructura necesaria para su correcto funcionamiento permitirán ofrecer una aplicación con alto valor potencial en distintos ámbitos de la vida cotidiana y profesional.
+In conclusion, the main objective of this work is to explore and take advantage of advances in XR technologies for the development of a React application that allows users to enjoy immersive experiences in AR and VR. The study of the involved technologies and the configuration of the necessary infrastructure for their correct operation will make it possible to offer an application with high potential value in different areas of everyday and professional life.
 
 **Imágenes**
 
 ![Modelo 3D en AR / Modelo 3D en VR](https://gdurl.com/AIXe)
 Palau de Reina Sofía en la ciudad de Artes y Ciencias en Realidad Aumentada y Realidad Virtual
 
-[^2]: Referencia 2 - [VR:oculus](URL)
-[^1]: Referencia 1 - [XR:taxonomy](URL)
-[^3]: Referencia 3 - [AR:apple](URL)
-[^4]: Referencia 4 - [XR:three](URL)
+[^1]: [XR:taxonomy](URL)
+[^2]: [VR:oculus](URL)
+[^3]: [AR:apple](URL)
+[^4]: [XR:three](URL)
