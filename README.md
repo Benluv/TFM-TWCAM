@@ -20,12 +20,19 @@ In the development of this research, various fundamental aspects will be address
 
 In conclusion, the main objective of this work is to explore and take advantage of advances in XR technologies for the development of a React application that allows users to enjoy immersive experiences in AR and VR. The study of the involved technologies and the configuration of the necessary infrastructure for their correct operation will make it possible to offer an application with high potential value in different areas of everyday and professional life.
 
-**Imágenes**
+Link to the aforementioned document:
+[Master's Thesis](https://gdurl.com/gQszv "UV TWCAM Master Thesis")
 
+[*Please be aware it is in Spanish*]
+
+App in action:
 ![Modelo 3D en AR / Modelo 3D en VR](https://gdurl.com/AIXe)
-Palau de Reina Sofía en la ciudad de Artes y Ciencias en Realidad Aumentada y Realidad Virtual
+Palau de les Arts Reina Sofía en Augmented and Virtual Reality
 
 [^1]: [XR:taxonomy](URL)
 [^2]: [VR:oculus](URL)
 [^3]: [AR:apple](URL)
 [^4]: [XR:three](URL)
+
+
+Some text
