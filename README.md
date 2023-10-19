@@ -1,6 +1,6 @@
 # Adquired from my Master's Thesis
 
-## Introduction
+## Abstract
 
 In the current digital age, technology has undergone significant advances that have permeated various aspects of our daily lives, transforming the way we interact with the environment and access information. One of the fields that has experienced rapid development is that of Extended Reality (XR)[^1], an umbrella term that encompasses Virtual Reality (VR)[^2], Augmented Reality (AR)[^3], and Mixed Reality (MR)[^1], complementing the ability to add information virtually with the control and knowledge of a virtual environment[^1]. These emerging technologies have opened up a wide range of possibilities in both applications for practical and leisure use, as well as its usage in various sectors, from industry and entertainment to education and medicine.
 
@@ -33,6 +33,3 @@ Palau de les Arts Reina Sofía en Augmented and Virtual Reality
 [^2]: [VR:oculus](URL)
 [^3]: [AR:apple](URL)
 [^4]: [XR:three](URL)
-
-
-Some text
